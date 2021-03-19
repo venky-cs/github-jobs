@@ -1,4 +1,5 @@
 import React from 'react'
+import './Header.css'
 import Search from './Search'
 
 let title:string = 'Github Jobs'

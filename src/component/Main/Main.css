@@ -1,0 +1,9 @@
+.main{
+    display: flex;
+}
+.side{
+    flex:35;
+}
+.content{
+    flex:65;
+}

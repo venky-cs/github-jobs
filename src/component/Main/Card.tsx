@@ -17,7 +17,6 @@ const Card:FunctionComponent = () => {
                 <p>location</p>
                 <p>created_at</p>
             </div>
-
         </div>
         </Link>
     )

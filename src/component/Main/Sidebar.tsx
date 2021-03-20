@@ -29,7 +29,7 @@ const Sidebar: FunctionComponent<{main:any}> = ({main}) => {
             <div className="select">
                 <input type="radio" name="country" value="london" onClick={(e:any) =>setLocation(e.target.value)} id=""/> <span>London</span> <br/>
                 <input type="radio" name="country" value="amsterdam" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>Amsterdam</span> <br/>
-                <input type="radio" name="country" value="newyork" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>New York</span> <br/>
+                <input type="radio" name="country" value="new+york" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>New York</span> <br/>
                 <input type="radio" name="country" value="berlin" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>Berlin</span>
             </div>
         </div>

@@ -3,10 +3,10 @@ import './Main.css'
 import Sidebar from './Sidebar'
 import Content from './Content'
 
-const Main:FunctionComponent = () => {
+const Main:FunctionComponent<{main:any}> = ({main}) => {
     return (
         <div className="main">
-            <Sidebar />
+            <Sidebar main={main}/>
             <Content />
         </div>
     )

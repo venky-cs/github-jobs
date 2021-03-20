@@ -9,7 +9,7 @@ function AppRouter() {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <App />
+                        <App head={getHead} main={getMain} update={updateState} />
                     </Route>
                     <Route exact path="/info">
                         <Info />
@@ -18,6 +18,22 @@ function AppRouter() {
             </Router>
         </div>
     )
+
+    function getHead(val:string){
+        let value = val;
+        console.log("TITLE",value)
+    }
+
+    function getMain(ful:boolean,loc:string){
+        let full = ful;
+        let location = loc;
+        console.log("FullTime",full);
+        console.log("Location",location)
+    }
+
+    function updateState(){
+        console.log("fire")
+    }
 }
 
 export default AppRouter;

@@ -4,11 +4,11 @@ import Header from './component/Header/Header'
 import Main from './component/Main/Main';
 import Footer from './component/Footer/Footer';
 
-const App:FunctionComponent = () => {
+const App:FunctionComponent<{head:any,main:any,update:any}> = ({head,main,update}) => {
   return (
     <div className="App">
-      <Header />
-      <Main />
+      <Header head={head} update={update} />
+      <Main main={main}/>
       <Footer />
     </div>
   );

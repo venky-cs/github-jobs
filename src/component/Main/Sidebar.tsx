@@ -1,11 +1,16 @@
-import React, { FunctionComponent, useState } from 'react'
+import React, { FunctionComponent, useState, useEffect } from 'react'
 
-const Sidebar: FunctionComponent = () => {
-    const [isFullTime,setIsFullTime] = useState(false)
+const Sidebar: FunctionComponent<{main:any}> = ({main}) => {
+    const [isFullTime,setIsFullTime] = useState<boolean>(false)
     const [location,setLocation] =useState<string>(' ')
+
+    useEffect(() => {
+        main(isFullTime,location)
+    },[main,isFullTime, location])
+    
     return (
         <div className="side">
-            <div className="check">
+            <div className="check" onClick={updateFullTime}>
             <input type="checkbox" name="" id="" checked={isFullTime} 
             onChange={updateFullTime}/>
             <label>Full time</label>

@@ -1,7 +1,10 @@
-import React,{FunctionComponent,useState} from 'react'
+import React,{FunctionComponent,useState,useEffect} from 'react'
 
-const Search:FunctionComponent = () => {
-    const [title,setTitle] = useState('')
+const Search: FunctionComponent<{head:any,update:any}> = ({head,update}) => {
+    const [title,setTitle] = useState<string>('')
+    useEffect(() => {
+        head(title)
+    }, [head,title])
     return (
         <div className="search">
             <input type="text" placeholder="Title,Companies,expertise or benefits"
@@ -9,7 +12,7 @@ const Search:FunctionComponent = () => {
                     let val = e.target.value;
                     setTitle(val)
                 }}/>
-            <button>Search</button>
+            <button onClick={update}>Search</button>
         </div>
     )
 }

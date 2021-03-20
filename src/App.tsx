@@ -12,6 +12,7 @@ const App:FunctionComponent = () => {
       <Footer />
     </div>
   );
+  
 }
 
 export default App;

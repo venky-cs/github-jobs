@@ -6,7 +6,8 @@ const Sidebar: FunctionComponent = () => {
     return (
         <div className="side">
             <div className="check">
-            <input type="checkbox" name="" id="" checked={isFullTime} />
+            <input type="checkbox" name="" id="" checked={isFullTime} 
+            onChange={updateFullTime}/>
             <label>Full time</label>
             </div>
 
@@ -24,7 +25,11 @@ const Sidebar: FunctionComponent = () => {
                 
             </div>
         </div>
+        
     )
+    function updateFullTime():void {
+        setIsFullTime(prevState => !prevState)
+    }
 }
 
 export default Sidebar

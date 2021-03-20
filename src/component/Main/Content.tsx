@@ -1,9 +1,10 @@
 import React,{FunctionComponent} from 'react'
+import Card from './Card'
 
 const Content:FunctionComponent = () => {
     return (
         <div className="content">
-            <h3>content</h3>
+            <Card />
         </div>
     )
 }

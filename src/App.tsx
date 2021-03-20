@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{FunctionComponent} from 'react';
 import './App.css';
 import Header from './component/Header/Header'
 import Main from './component/Main/Main';
 import Footer from './component/Footer/Footer';
 
-function App() {
+const App:FunctionComponent = () => {
   return (
     <div className="App">
       <Header />

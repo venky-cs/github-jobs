@@ -13,13 +13,14 @@ function AppRouter() {
     const [description, setDescription] = useState<string>('')
     const [location, setLocation] = useState<string>('')
 
-    const [data,setDate] =useState<[]>([])
+    const [data,setData] =useState<[]>([])
 
     useEffect(() => {
         axios.get(`${cors}https://jobs.github.com/positions.json?description=${description}&location=${location}`)
-            .then(response => console.log(response.data))
+            .then(response => setData(response.data))
             .catch(err => console.log(err))
     }, [state])
+
 
     return (
 

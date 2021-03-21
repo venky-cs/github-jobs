@@ -9,8 +9,7 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
     return (
         <Link to="/info">
             {datas.map((data:any) =>
-                <div className="card">
-                    <h3>fef</h3>
+                <div className="card" key={data}>
                     <div className="logo">
                         <img src={data.company_logo} alt="logo" />
                     </div>

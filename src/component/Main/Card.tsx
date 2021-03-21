@@ -9,8 +9,8 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
     return (
         <>
             {datas.map((data: any) =>
-                <Link to={{pathname:'/info'}}>
-                    <div className="card" key={data}>
+                <div className="card" key={data.id}>
+                    <Link to={{ pathname: '/info', state: data.id }}>
                         <div className="logo">
                             <img src={data.company_logo} alt="logo" />
                         </div>
@@ -23,8 +23,8 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
                             <p>{data.location}</p>
                             <p>{getDaysAgo(data.created_at)} days ago</p>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             )}
         </>
     )

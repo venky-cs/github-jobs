@@ -13,11 +13,13 @@ function AppRouter() {
     const [description, setDescription] = useState<string>('')
     const [location, setLocation] = useState<string>('')
 
-    const [data,setData] =useState<[]>([])
+    const [data, setData] = useState<[]>([])
 
     useEffect(() => {
         axios.get(`${cors}https://jobs.github.com/positions.json?description=${description}&location=${location}`)
-            .then(response => setData(response.data))
+            .then(response => {
+                setData(response.data)
+            })
             .catch(err => console.log(err))
     }, [state])
 
@@ -25,19 +27,19 @@ function AppRouter() {
     return (
 
         <DataContext.Provider value={data}>
-        <div>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <App head={getHead} main={getMain} update={updateState} />
-                    </Route>
-                    <Route exact path="/info">
-                        <Info />
-                    </Route>
-                </Switch>
-            </Router>
-        </div>
-    </DataContext.Provider>
+            <div>
+                <Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <App head={getHead} main={getMain} update={updateState} />
+                        </Route>
+                        <Route exact path="/info">
+                            <Info />
+                        </Route>
+                    </Switch>
+                </Router>
+            </div>
+        </DataContext.Provider>
     )
 
     function getHead(val: string) {

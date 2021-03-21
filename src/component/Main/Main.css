@@ -2,10 +2,10 @@
     display: flex;
 }
 .side{
-    flex:35;
+    flex:25;
 }
 .content{
-    flex:65;
+    flex:70;
 }
 .content .card{
     display: flex;

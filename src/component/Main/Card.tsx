@@ -7,23 +7,26 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
         setDatas(data)
     }, [data])
     return (
-        <Link to="/info">
+        <>
             {datas.map((data: any) =>
-                <div className="card" key={data}>
-                    <div className="logo">
-                        <img src={data.company_logo} alt="logo" />
+                <Link to={{pathname:'/info'}}>
+                    <div className="card" key={data}>
+                        <div className="logo">
+                            <img src={data.company_logo} alt="logo" />
+                        </div>
+                        <div className="info">
+                            <h5>{data.company}</h5>
+                            <h3>{data.title}</h3>
+                            <p>{data.type}</p>
+                        </div>
+                        <div className="loc">
+                            <p>{data.location}</p>
+                            <p>{getDaysAgo(data.created_at)} days ago</p>
+                        </div>
                     </div>
-                    <div className="info">
-                        <h5>{data.company}</h5>
-                        <h3>{data.title}</h3>
-                        <p>{data.type}</p>
-                    </div>
-                    <div className="loc">
-                        <p>{data.location}</p>
-                        <p>{getDaysAgo(data.created_at)} days ago</p>
-                    </div>
-                </div>)}
-        </Link>
+                </Link>
+            )}
+        </>
     )
 
     function getDaysAgo(created_at: string) {

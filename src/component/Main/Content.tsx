@@ -1,10 +1,13 @@
-import React,{FunctionComponent} from 'react'
+import React,{FunctionComponent,useContext,useEffect} from 'react'
 import Card from './Card'
+import {DataContext} from '../../AppRouter'
 
 const Content:FunctionComponent = () => {
+    const dataContext = useContext(DataContext)
+    console.log(dataContext)
     return (
         <div className="content">
-            <Card />
+            <Card data={dataContext}/>
         </div>
     )
 }

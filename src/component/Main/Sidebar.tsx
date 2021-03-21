@@ -20,17 +20,17 @@ const Sidebar: FunctionComponent<{main:any}> = ({main}) => {
                 <h3>LOCATION</h3>
                 <input type="text" name="" id=""
                  placeholder="City, state, zip, code or country"
-                 onChange={(e) => {
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     let loc = e.target.value;
                     setLocation(loc)
                  }}/>
             </div>
 
             <div className="select">
-                <input type="radio" name="country" value="london" onClick={(e:any) =>setLocation(e.target.value)} id=""/> <span>London</span> <br/>
-                <input type="radio" name="country" value="amsterdam" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>Amsterdam</span> <br/>
-                <input type="radio" name="country" value="new+york" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>New York</span> <br/>
-                <input type="radio" name="country" value="berlin" onClick={(e: any) => setLocation(e.target.value)} id=""/> <span>Berlin</span>
+                <input type="radio" name="country" value="london" onChange={getSelect} id=""/> <span>London</span> <br/>
+                <input type="radio" name="country" value="amsterdam" onChange={getSelect} id=""/> <span>Amsterdam</span> <br/>
+                <input type="radio" name="country" value="new+york" onChange={getSelect} id=""/> <span>New York</span> <br/>
+                <input type="radio" name="country" value="berlin" onChange={getSelect} id=""/> <span>Berlin</span>
             </div>
         </div>
         
@@ -38,6 +38,13 @@ const Sidebar: FunctionComponent<{main:any}> = ({main}) => {
     function updateFullTime():void {
         setIsFullTime(prevState => !prevState)
     }
-}
+    function getSelect(event: React.ChangeEvent<HTMLInputElement>):void {
+        let val = event.target.value;
+        console.log(val,"radio button")
+        setLocation(val)
+    }
+
+    }
+
 
 export default Sidebar

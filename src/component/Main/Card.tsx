@@ -1,14 +1,14 @@
-import React, { FunctionComponent,useEffect,useState } from 'react'
+import React, { FunctionComponent, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Card: FunctionComponent<{ data: any }> = ({ data }) => {
-    const[datas,setDatas]=useState([])
+    const [datas, setDatas] = useState([])
     useEffect(() => {
         setDatas(data)
-    },[data])
+    }, [data])
     return (
         <Link to="/info">
-            {datas.map((data:any) =>
+            {datas.map((data: any) =>
                 <div className="card" key={data}>
                     <div className="logo">
                         <img src={data.company_logo} alt="logo" />
@@ -20,11 +20,20 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
                     </div>
                     <div className="loc">
                         <p>{data.location}</p>
-                        <p>created_at</p>
+                        <p>{getDaysAgo(data.created_at)} days ago</p>
                     </div>
                 </div>)}
         </Link>
     )
+
+    function getDaysAgo(created_at: string) {
+        let a = created_at;
+        let b = new Date(a);
+        let createDay = b.getHours()
+        let currentDay = new Date().getDate()
+        let daysAgo = currentDay - createDay
+        return daysAgo
+    }
 }
 
 export default Card

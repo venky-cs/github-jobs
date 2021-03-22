@@ -1,89 +1,115 @@
 .info-page {
-    display: flex;
+  display: flex;
 }
-.info-page .side{
-    flex: 25;
+.info-page .side {
+  flex: 25;
 }
-.side-width,.main-width{
-    width: 95%;
-    margin: 0 auto;
+.side-width,
+.main-width {
+  width: 95%;
+  margin: 0 auto;
 }
-.info-page .main-page{
-    flex:75;
+.info-page .main-page {
+  flex: 75;
 }
-.info-page .main-page .content{
-    display: flex;
-    align-items: center;
+.info-page .main-page .content {
+  display: flex;
+  align-items: center;
 }
-.info-page .title{
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 30px;
+.info-page .title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
-.info-page .side .back{
-    font-weight: 500;
-    font-size: 14px;
-    color: #1e86ff;
-    margin-bottom: 50px;
+.info-page .side .back {
+  font-weight: 500;
+  font-size: 14px;
+  color: #1e86ff;
+  margin-bottom: 50px;
 }
-.info-page .side .how{
-    font-weight: 700;
-    font-size: 14px;
-    color: #b9bdcf;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.info-page .main-page h4{
-    font-weight: 700;
-    font-size: 24px;
-    color: #334680;
+.info-page .side .how {
+  font-weight: 700;
+  font-size: 14px;
+  color: #b9bdcf;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-.info-page .main-page span{
-    font-size: 12px;
-    border: 1px solid #334680;
-    border-radius: 4px;
-    padding: 5px;
-    margin-left: 15px;
+.info-page .main-page h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #334680;
 }
 
-.info-page .main-page p{
-    font-weight: 500;
-    font-size: 12px;
-    color: #b7bcce;
+.info-page .main-page span {
+  font-size: 12px;
+  border: 1px solid #334680;
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 15px;
 }
 
-.info-page .main-page .content{
-    margin-top: 50px;
-    margin-bottom: 50px;
+.info-page .main-page p {
+  font-weight: 500;
+  font-size: 12px;
+  color: #b7bcce;
+}
+
+.info-page .main-page .content {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .info-page .main-page .content img {
-    width: 42px;
-    height: 42px;
-    border-radius: 4px;
-    margin-right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
-.info-page .main-page .content  div > h3{
-    font-weight: 700px;
-    font-style: 14px;
-    color: #334680;
+.info-page .main-page .content div > h3 {
+  font-weight: 700px;
+  font-style: 14px;
+  color: #334680;
 }
-.info-page .main-page .content div > p{
-    font-weight: 500;
-    font-style:12px;
-    color: #b9bdcf;
-}
-
-.info-page .main-page .json p{
-    font-weight: 400;
-    font-size: 16px;
-    color: #334680;
+.info-page .main-page .content div > p {
+  font-weight: 500;
+  font-style: 12px;
+  color: #b9bdcf;
 }
 
-.info-page .side .how-json{
-    font-weight: 500;
+.info-page .main-page .json p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #334680;
+}
+
+.info-page .side .how-json {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  .info-page {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .info-page .title,
+  .info-page .main-page h4 {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+  .info-page .side .back,
+  .info-page .side .how,
+  .info-page .main-page .content div > h3,
+  .info-page .main-page .json p,li {
     font-size: 12px;
+  }
+  .info-page .main-page span,
+  .info-page .main-page p,
+  .info-page .main-page .content div > p,
+  .info-page .side .how-json {
+    font-size: 10px;
+  }
 }

@@ -1,56 +1,76 @@
-.main{
-    display: flex;
+.main {
+  display: flex;
 }
-.main .side{
-    flex:25;
+.main .side {
+  flex: 25;
 }
-.content{
-    flex:70;
+.content {
+  flex: 70;
 }
-.content .card{
-    display: flex;
-    align-items: center;
-    margin: 25px auto;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
+.content .card .flex {
+  display: flex;
+  align-items: center;
 }
-img{
-    width: 100%;
+.content .card {
+  margin: 25px auto;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
-.content .card .logo{
-    width: 90px;
-    height: 90px;
-    text-align: center;
-    margin-right: 10px;
+img {
+  width: 100%;
 }
-.content .card .info h5{
-    font-weight: 700;
+.content .card .logo {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  margin-right: 10px;
+}
+.content .card .info h5 {
+  font-weight: 700;
+  font-size: 12px;
+  color: #334680;
+}
+.content .card .info h3 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #334680;
+}
+.content .card .info p {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 12px;
+  color: #334680;
+  border: 1px solid #334680;
+  border-radius: 4px;
+  padding: 5px;
+}
+.content .card .loc p {
+  font-weight: 500;
+  font-size: 12px;
+  color: #b9bdcf;
+  padding: 10px;
+}
+.content .card .loc {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    display: block;
+  }
+  .content .card .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .content .card .info h5,
+  .content .card .info h3 {
     font-size: 12px;
-    color: #334680;
-}
-.content .card .info h3{
-    font-weight: 400;
-    font-size: 18px;
-    color: #334680;
-}
-.content .card .info p{
-    display: inline-block;
-    font-weight: 700;
-    font-size: 12px;
-    color: #334680;
-    border: 1px solid #334680;
-    border-radius: 4px;
-    padding:5px;
-}
-.content .card .loc p{
-    font-weight: 500;
-    font-size: 12px;
-    color:#b9bdcf;
-    padding: 10px;
-}
-.content .card .loc{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  }
+  .content .card .loc p,
+  .content .card .info p {
+    font-size: 10px;
+  }
 }

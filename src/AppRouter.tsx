@@ -58,6 +58,7 @@ function AppRouter() {
 
     function updateState() {
         console.log("fire")
+        setData([])
         setState(prevState => !prevState)
     }
 }

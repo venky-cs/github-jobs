@@ -44,6 +44,7 @@
     "@types/axios": "^0.14.0",
     "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-spinners": "^0.10.6"
   }
 }

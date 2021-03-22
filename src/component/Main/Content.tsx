@@ -1,13 +1,19 @@
-import React,{FunctionComponent,useContext} from 'react'
+import React, { FunctionComponent, useContext } from 'react'
 import Card from './Card'
-import {DataContext} from '../../AppRouter'
+import { DataContext } from '../../AppRouter'
 
-const Content:FunctionComponent = () => {
+import RingLoader from 'react-spinners/RingLoader'
+
+const Content: FunctionComponent = () => {
     const dataContext = useContext(DataContext)
     console.log(dataContext)
     return (
         <div className="content">
-            <Card data={dataContext}/>
+            {dataContext.length > 1
+                ? <Card data={dataContext} />
+                : <div style={{ display: "grid", placeItems: "center", marginRight: "200px", marginTop: "100px" }}>
+                    <RingLoader />
+                </div>}
         </div>
     )
 }

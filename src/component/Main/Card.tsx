@@ -10,7 +10,7 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
         <>
             {datas.map((data: any) =>
                 <div className="card" key={data.id}>
-                    <Link to={{ pathname: '/info', state: data.id }}>
+                    <Link to={{ pathname: '/info', state: data.id }} style={{textDecoration:"none"}}>
                         <div className="logo">
                             <img src={data.company_logo} alt="logo" />
                         </div>

@@ -27,7 +27,7 @@ const Info: FunctionComponent = () => {
     return (
         <>
             {datas.map((data: any) =>
-                <div className="info-page">
+                <div className="info-page" key={data.id}>
                     <div className="side">
                         <div className="side-width">
                             <h3 className="title">{title}</h3>
@@ -54,6 +54,7 @@ const Info: FunctionComponent = () => {
                             </div>
 
                             <div className="json" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+                            <br />
                         </div>
                     </div>
                 </div>

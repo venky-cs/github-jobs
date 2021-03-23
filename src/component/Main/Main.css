@@ -4,6 +4,30 @@
 .main .side {
   flex: 25;
 }
+.main .side .check,
+.main .side .search {
+  margin: 20px 0;
+}
+.side .check > label,
+.side .select > span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #334680;
+  margin-left: 5px;
+}
+.main .side .search h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #b9bdcf;
+  padding: 10px 0;
+}
+.main .side .search input {
+  background: #ffffff;
+  width: 85%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
 .content {
   flex: 70;
 }
@@ -66,7 +90,10 @@ img {
     height: 50px;
   }
   .content .card .info h5,
-  .content .card .info h3 {
+  .content .card .info h3,
+  .side .check > label,
+  .side .select > span,
+  .main .side .search h3 {
     font-size: 12px;
   }
   .content .card .loc p,

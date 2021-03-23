@@ -1,5 +1,6 @@
 .info-page {
   display: flex;
+  margin-top: 30px;
 }
 .info-page .side {
   flex: 25;

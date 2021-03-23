@@ -9,7 +9,7 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
     return (
         <>
             {datas.map((data: any) =>
-                <Link to={{ pathname: '/info', state: data.id }} style={{ textDecoration: "none" }}>
+                <Link key={data.id} to={{ pathname: '/info', state: data.id }} style={{ textDecoration: "none" }}>
                     <div className="card" key={data.id}>
                         <div className="flex">
                             <div className="logo">

@@ -12,15 +12,21 @@ function AppRouter() {
     const [state, setState] = useState<boolean>(false)
     const [description, setDescription] = useState<string>('')
     const [location, setLocation] = useState<string>('')
+    const [fullTime, setFullTime] = useState<boolean>(false)
 
     const [data, setData] = useState<[]>([])
 
+    let switchBtn = fullTime ? `&full_time=true&location=${location}` : `&location=${location}`
+
+
     useEffect(() => {
-        axios.get(`${cors}https://jobs.github.com/positions.json?description=${description}&location=${location}`)
+        axios.get(`${cors}https://jobs.github.com/positions.json?description=${description}${switchBtn}`)
             .then(response => {
                 setData(response.data)
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+            })
     }, [state])
 
 
@@ -53,6 +59,7 @@ function AppRouter() {
         let location = loc;
         console.log("FullTime", full);
         console.log("Location", location)
+        setFullTime(full)
         setLocation(location)
     }
 

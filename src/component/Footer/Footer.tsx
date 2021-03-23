@@ -5,7 +5,7 @@ const Footer: FunctionComponent = () => {
     const dataContext = useContext(DataContext)
 
     return (
-        <div className={dataContext.length > 5 ? 'relative' : 'absolute'}>
+        <div className={dataContext.length > 2 ? 'relative' : 'absolute'}>
             <p>created by venky -devChallenges.io</p>
         </div>
     )

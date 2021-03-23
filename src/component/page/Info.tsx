@@ -3,7 +3,7 @@ import './Info.css'
 import { useLocation, Link } from 'react-router-dom'
 import { DataContext } from '../../AppRouter'
 
-let title: string = 'Github Jobs'
+let title: string = 'Github '
 const Info: FunctionComponent = () => {
     const [id, setId] = useState<any>('')
     const [datas, setDatas] = useState([])
@@ -30,7 +30,8 @@ const Info: FunctionComponent = () => {
                 <div className="info-page" key={data.id}>
                     <div className="side">
                         <div className="side-width">
-                            <h3 className="title">{title}</h3>
+                            <h3 className="title">{title}
+                            <span>Jobs</span></h3>
                             <Link to="/">
                                 <p className="back">Back to search</p>
                             </Link>

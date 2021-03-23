@@ -18,17 +18,23 @@
   align-items: center;
 }
 .info-page .title {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 30px;
 }
+.info-page .title > span {
+  font-weight: 300;
+}
 .info-page .side .back {
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #1e86ff;
   margin-bottom: 50px;
 }
 .info-page .side .how {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #b9bdcf;
@@ -37,6 +43,7 @@
 }
 
 .info-page .main-page h4 {
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 24px;
   color: #334680;
@@ -51,6 +58,7 @@
 }
 
 .info-page .main-page p {
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 12px;
   color: #b7bcce;
@@ -69,23 +77,27 @@
 }
 
 .info-page .main-page .content div > h3 {
+  font-family: 'Roboto', sans-serif;
   font-weight: 700px;
   font-style: 14px;
   color: #334680;
 }
 .info-page .main-page .content div > p {
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-style: 12px;
   color: #b9bdcf;
 }
 
 .info-page .main-page .json p {
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #334680;
 }
 
 .info-page .side .how-json {
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 12px;
 }
@@ -104,7 +116,8 @@
   .info-page .side .back,
   .info-page .side .how,
   .info-page .main-page .content div > h3,
-  .info-page .main-page .json p,li {
+  .info-page .main-page .json p,
+  li {
     font-size: 12px;
   }
   .info-page .main-page span,

@@ -17,7 +17,7 @@ const Sidebar: FunctionComponent<{ main: any }> = ({ main }) => {
             </div>
 
             <div className="search">
-                <h3>LOCATION</h3>
+                <h3>location</h3>
                 <input type="text" name="" id=""
                     placeholder="City, state, zip, code or country"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

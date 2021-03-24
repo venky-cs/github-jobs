@@ -31,7 +31,7 @@ const Info: FunctionComponent = () => {
                     <div className="side">
                         <div className="side-width">
                             <h3 className="title">{title}
-                            <span>Jobs</span></h3>
+                                <span>Jobs</span></h3>
                             <Link to="/">
                                 <p className="back">Back to search</p>
                             </Link>

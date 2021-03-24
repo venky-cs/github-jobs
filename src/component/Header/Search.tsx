@@ -8,12 +8,12 @@ const Search: FunctionComponent<{ head: any, update: any }> = ({ head, update })
     return (
         <div className="search">
             <div className="input">
-            <input type="text" placeholder="Title,Companies,expertise or benefits"
-                onChange={(e) => {
-                    let val = e.target.value;
-                    setTitle(val)
-                }} />
-            <button onClick={update}>Search</button>
+                <input type="text" placeholder="Title,Companies,expertise or benefits"
+                    onChange={(e) => {
+                        let val = e.target.value;
+                        setTitle(val)
+                    }} />
+                <button onClick={update}>Search</button>
             </div>
         </div>
     )

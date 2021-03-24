@@ -32,8 +32,11 @@ const Info: FunctionComponent = () => {
                         <div className="side-width">
                             <h3 className="title">{title}
                                 <span>Jobs</span></h3>
-                            <Link to="/">
-                                <p className="back">Back to search</p>
+                            <Link to="/" id="textDecoration">
+                                <p className="back">
+                                    <span id="icon-back" className="material-icons">keyboard_backspace</span>
+                                    Back to search
+                                </p>
                             </Link>
                             <p className="how">how to apply</p>
                             <div className="how-json" dangerouslySetInnerHTML={{ __html: data.how_to_apply }}></div>
@@ -50,7 +53,10 @@ const Info: FunctionComponent = () => {
                                 <img src={data.company_logo} alt="logo" />
                                 <div>
                                     <h3>{data.company}</h3>
-                                    <p>{data.location}</p>
+                                    <p>
+                                        <span id="no-border" className="material-icons">public</span>
+                                        {data.location}
+                                    </p>
                                 </div>
                             </div>
 

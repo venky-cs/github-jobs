@@ -24,6 +24,7 @@ const Sidebar: FunctionComponent<{ main: any }> = ({ main }) => {
                         let loc = e.target.value;
                         setLocation(loc.toLowerCase())
                     }} />
+                <span id="icon-left" className="material-icons">public</span>
             </div>
 
             <div className="select">

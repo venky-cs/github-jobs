@@ -29,6 +29,7 @@
   width: 70%;
   padding: 15px 20px;
   border-right: none;
+  padding-left: 50px;
 }
 .search .input button {
   font-family: 'Roboto', sans-serif;

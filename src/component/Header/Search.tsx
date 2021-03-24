@@ -8,6 +8,9 @@ const Search: FunctionComponent<{ head: any, update: any }> = ({ head, update })
     return (
         <div className="search">
             <div className="input">
+                <span id="icon-right" className="material-icons">
+                    work_outline
+                </span>
                 <input type="text" placeholder="Title,Companies,expertise or benefits"
                     onChange={(e) => {
                         let val = e.target.value;

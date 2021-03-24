@@ -22,8 +22,14 @@ const Card: FunctionComponent<{ data: any }> = ({ data }) => {
                             </div>
                         </div>
                         <div className="loc">
-                            <p>{data.location}</p>
-                            <p>{getDaysAgo(data.created_at)} days ago</p>
+                            <p>
+                                <span id="icon-bottom" className="material-icons">public</span>
+                                {data.location}
+                            </p>
+                            <p>
+                                <span id="icon-bottom" className="material-icons">query_builder</span>
+                                {getDaysAgo(data.created_at)} days ago
+                            </p>
                         </div>
                     </div>
                 </Link>

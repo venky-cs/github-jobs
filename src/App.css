@@ -27,3 +27,13 @@
   width: 80%;
   text-align: center;
 }
+#icon-right{
+  position: relative;
+  left: 30px;
+  color: #b9bdcf;
+}
+#icon-bottom{
+  position: relative;
+  top: 6px;
+  padding-right: 2px;
+}

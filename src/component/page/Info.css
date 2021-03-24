@@ -101,6 +101,17 @@
   font-weight: 500;
   font-size: 12px;
 }
+#textDecoration{
+  text-decoration: none;
+}
+#icon-back{
+  position: relative;
+  top: 6px;
+  padding-right: 4px;
+}
+#no-border{
+  border: none;
+}
 
 @media screen and (max-width: 800px) {
   .info-page {

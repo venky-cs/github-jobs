@@ -27,8 +27,10 @@
 .main .side .search input {
   background: #ffffff;
   width: 85%;
+  height: 30px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+  padding-left: 30px;
 }
 .content {
   flex: 70;
@@ -85,6 +87,14 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+#icon-left{
+  position: relative;
+  right: 220px;
+  top: 3px;
+  font-size: 18px;
+  color: #b9bdcf;
 }
 
 @media screen and (max-width: 800px) {

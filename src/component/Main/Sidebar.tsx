@@ -18,13 +18,13 @@ const Sidebar: FunctionComponent<{ main: any }> = ({ main }) => {
 
             <div className="search">
                 <h3>location</h3>
+                <span id="icon-left" className="material-icons">public</span>
                 <input type="text" name="" id=""
                     placeholder="City, state, zip, code or country"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                         let loc = e.target.value;
                         setLocation(loc.toLowerCase())
                     }} />
-                <span id="icon-left" className="material-icons">public</span>
             </div>
 
             <div className="select">

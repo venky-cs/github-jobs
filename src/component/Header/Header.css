@@ -51,6 +51,7 @@
 @media screen and (max-width: 800px) {
   .search .input input {
     padding: 12px 15px;
+    padding-left:30px;
   }
   .search .input button {
     font-size: 12px;

@@ -101,15 +101,15 @@
   font-weight: 500;
   font-size: 12px;
 }
-#textDecoration{
+#textDecoration {
   text-decoration: none;
 }
-#icon-back{
+#icon-back {
   position: relative;
   top: 6px;
   padding-right: 4px;
 }
-#no-border{
+#no-border {
   border: none;
 }
 

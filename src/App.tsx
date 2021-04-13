@@ -4,7 +4,13 @@ import Header from './component/Header/Header'
 import Main from './component/Main/Main';
 import Footer from './component/Footer/Footer';
 
-const App: FunctionComponent<{ head: any, main: any, update: any }> = ({ head, main, update }) => {
+interface AppProps{
+  head: (val: string) => void;
+  main: (ful: boolean, loc: string) => void
+  update:() => void
+}
+
+const App: FunctionComponent<AppProps> = ({ head, main, update }) => {
   return (
     <div className="App">
       <Header head={head} update={update} />

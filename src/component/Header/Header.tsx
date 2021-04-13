@@ -2,8 +2,13 @@ import React, { FunctionComponent } from 'react'
 import './Header.css'
 import Search from './Search'
 
+interface HeaderProps{
+    head: (val: string) => void;
+    update: () => void
+}
+
 let title: string = 'Github'
-const Header: FunctionComponent<{ head: any, update: any }> = ({ head, update }) => {
+const Header: FunctionComponent<HeaderProps> = ({ head, update }) => {
     return (
         <div className="header">
             <h3 className="title">

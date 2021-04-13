@@ -50,21 +50,21 @@ function AppRouter() {
 
     function getHead(val: string) {
         let value = val;
-        console.log("TITLE", value)
+        // console.log("TITLE", value)
         setDescription(value)
     }
 
     function getMain(ful: boolean, loc: string) {
         let full = ful;
         let location = loc;
-        console.log("FullTime", full);
-        console.log("Location", location)
+        // console.log("FullTime", full);
+        // console.log("Location", location)
         setFullTime(full)
         setLocation(location)
     }
 
     function updateState() {
-        console.log("fire")
+        // console.log("fire")
         setData([])
         setState(prevState => !prevState)
     }

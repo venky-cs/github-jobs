@@ -13,15 +13,15 @@ const Info: FunctionComponent = () => {
     const location = useLocation()
     useEffect(() => {
         setId(location.state)
-        console.log(dataContext)
-        console.log("id", location.state)
+        // console.log(dataContext)
+        // console.log("id", location.state)
     }, [dataContext])
 
 
     useEffect(() => {
-        console.log('ID', id)
+        // console.log('ID', id)
         setDatas(dataContext.filter((data: any) => data.id === id))
-        console.log("filtered Data", datas)
+        // console.log("filtered Data", datas)
     }, [id])
 
     return (

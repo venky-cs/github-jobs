@@ -6,7 +6,7 @@ import RingLoader from 'react-spinners/RingLoader'
 
 const Content: FunctionComponent = () => {
     const dataContext = useContext(DataContext)
-    console.log(dataContext)
+    // console.log(dataContext)
     return (
         <div className="content">
             {dataContext.length > 1

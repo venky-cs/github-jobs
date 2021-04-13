@@ -89,9 +89,9 @@ img {
   justify-content: flex-end;
 }
 
-#icon-left{
+#icon-left {
   position: relative;
-  right:0px;
+  right: 0px;
   left: 25px;
   top: 3px;
   font-size: 18px;

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react'
 
-const Sidebar: FunctionComponent<{ main: any }> = ({ main }) => {
+const Sidebar: FunctionComponent<{ main: (ful: boolean, loc: string) => void }> = ({ main }) => {
     const [isFullTime, setIsFullTime] = useState<boolean>(false)
     const [location, setLocation] = useState<string>(' ')
 
@@ -41,7 +41,7 @@ const Sidebar: FunctionComponent<{ main: any }> = ({ main }) => {
     }
     function getSelect(event: React.ChangeEvent<HTMLInputElement>): void {
         let val = event.target.value;
-        console.log(val, "radio button")
+        // console.log(val, "radio button")
         setLocation(val)
     }
 

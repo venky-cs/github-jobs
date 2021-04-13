@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react'
 
-const Search: FunctionComponent<{ head: any, update: any }> = ({ head, update }) => {
+const Search: FunctionComponent<{ head: (val:string) => void, update: () => void}> = ({ head, update }) => {
     const [title, setTitle] = useState<string>('')
     useEffect(() => {
         head(title)

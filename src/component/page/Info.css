@@ -3,15 +3,17 @@
   margin-top: 30px;
 }
 .info-page .side {
-  flex: 25;
+  width: 20%;
+  padding: 20px;
 }
 .side-width,
 .main-width {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
 .info-page .main-page {
-  flex: 75;
+  width: 80%;
+  padding: 20px;
 }
 .info-page .main-page .content {
   display: flex;
@@ -100,6 +102,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 12px;
+  overflow-wrap: break-word;
 }
 #textDecoration {
   text-decoration: none;
@@ -118,6 +121,10 @@
     display: block;
     width: 95%;
     margin: 0 auto;
+  }
+  .info-page .side,
+  .info-page .main-page {
+    width: 100%;
   }
   .info-page .title,
   .info-page .main-page h4 {

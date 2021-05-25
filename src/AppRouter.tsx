@@ -14,17 +14,24 @@ function AppRouter() {
     const [location, setLocation] = useState<string>('')
     const [fullTime, setFullTime] = useState<boolean>(false)
 
+    const [loading, setLoading] = useState<boolean>(false)
+
     const [data, setData] = useState<[]>([])
 
     let switchBtn = fullTime ? `&full_time=true&location=${location}` : `&location=${location}`
 
 
     useEffect(() => {
-        axios.get(`${cors}https://jobs.github.com/positions.json?description=${description}${switchBtn}`)
+        setLoading(false)
+        axios.get(`${cors}https://jobs.github.com/positions.json?markdown=truedescription=${description}${switchBtn}`)
             .then(response => {
                 setData(response.data)
+                if (response.data < 1) {
+                    setLoading(true)
+                }
             })
             .catch(err => {
+                setLoading(true)
                 console.log(err)
             })
     }, [state])
@@ -37,7 +44,7 @@ function AppRouter() {
                 <Router>
                     <Switch>
                         <Route exact path="/">
-                            <App head={getHead} main={getMain} update={updateState} />
+                            <App head={getHead} main={getMain} update={updateState} load={loading} />
                         </Route>
                         <Route exact path="/info">
                             <Info />

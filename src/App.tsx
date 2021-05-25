@@ -4,17 +4,18 @@ import Header from './component/Header/Header'
 import Main from './component/Main/Main';
 import Footer from './component/Footer/Footer';
 
-interface AppProps{
+interface AppProps {
   head: (val: string) => void;
   main: (ful: boolean, loc: string) => void
-  update:() => void
+  update: () => void
+  load: boolean
 }
 
-const App: FunctionComponent<AppProps> = ({ head, main, update }) => {
+const App: FunctionComponent<AppProps> = ({ head, main, update, load }) => {
   return (
     <div className="App">
       <Header head={head} update={update} />
-      <Main main={main} />
+      <Main main={main} load={load} />
       <Footer />
     </div>
   );

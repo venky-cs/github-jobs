@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from 'react'
 
 const Sidebar: FunctionComponent<{ main: (ful: boolean, loc: string) => void }> = ({ main }) => {
     const [isFullTime, setIsFullTime] = useState<boolean>(false)
-    const [location, setLocation] = useState<string>(' ')
+    const [location, setLocation] = useState<string>('')
 
     useEffect(() => {
         main(isFullTime, location)
@@ -21,6 +21,7 @@ const Sidebar: FunctionComponent<{ main: (ful: boolean, loc: string) => void }> 
                 <span id="icon-left" className="material-icons">public</span>
                 <input type="text" name="" id=""
                     placeholder="City, state, zip, code or country"
+                    value={location.charAt(0).toUpperCase() + location.slice(1)}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                         let loc = e.target.value;
                         setLocation(loc.toLowerCase())
@@ -28,10 +29,24 @@ const Sidebar: FunctionComponent<{ main: (ful: boolean, loc: string) => void }> 
             </div>
 
             <div className="select">
-                <input type="radio" name="country" value="london" onChange={getSelect} id="" /> <span>London</span> <br />
-                <input type="radio" name="country" value="amsterdam" onChange={getSelect} id="" /> <span>Amsterdam</span> <br />
-                <input type="radio" name="country" value="new+york" onChange={getSelect} id="" /> <span>New York</span> <br />
-                <input type="radio" name="country" value="berlin" onChange={getSelect} id="" /> <span>Berlin</span>
+                <div>
+                    <input type="radio" name="country" value="london" onChange={getSelect} id="london" />
+                    <label htmlFor="london">London</label>
+                </div>
+                <div>
+                    <input type="radio" name="country" value="amsterdam" onChange={getSelect} id="amsterdam" />
+                    <label htmlFor="amsterdam">Amsterdam</label>
+
+                </div>
+                <div>
+                    <input type="radio" name="country" value="new+york" onChange={getSelect} id="new+york" />
+                    <label htmlFor="new+york">New York</label>
+
+                </div>
+                <div>
+                    <input type="radio" name="country" value="berlin" onChange={getSelect} id="berlin" />
+                    <label htmlFor="berlin">Berlin</label>
+                </div>
             </div>
         </div>
 
@@ -46,6 +61,5 @@ const Sidebar: FunctionComponent<{ main: (ful: boolean, loc: string) => void }> 
     }
 
 }
-
 
 export default Sidebar

@@ -4,15 +4,16 @@ import { DataContext } from '../../AppRouter'
 
 import RingLoader from 'react-spinners/RingLoader'
 
-const Content: FunctionComponent = () => {
+const Content: FunctionComponent<{ load: boolean }> = ({ load }) => {
     const dataContext = useContext(DataContext)
+    // console.log(load)
     // console.log(dataContext)
     return (
         <div className="content">
             {dataContext.length > 1
                 ? <Card data={dataContext} />
                 : <div style={{ display: "grid", placeItems: "center", marginRight: "200px", marginTop: "100px" }}>
-                    <RingLoader />
+                    {load ? <h2>No Data</h2> : <RingLoader />}
                 </div>}
         </div>
     )

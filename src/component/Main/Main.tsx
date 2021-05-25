@@ -3,11 +3,11 @@ import './Main.css'
 import Sidebar from './Sidebar'
 import Content from './Content'
 
-const Main: FunctionComponent<{ main: (ful: boolean, loc: string) => void }> = ({ main }) => {
+const Main: FunctionComponent<{ main: (ful: boolean, loc: string) => void; load: boolean }> = ({ main, load }) => {
     return (
         <div className="main">
             <Sidebar main={main} />
-            <Content />
+            <Content load={load} />
         </div>
     )
 }
